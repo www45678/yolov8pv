@@ -3,6 +3,16 @@
 See below for a quickstart installation and usage example, and see the [YOLOv8 Docs](https://docs.ultralytics.com) for
 full documentation on training, validation, prediction and deployment.
 
+> 注意事项：
+
+第一点：
+
+注意修改train.txt、test.txt以及val.txt中图片的路径（最好使用绝对路径）可更改voc_label.py中的list_file.write（）属性来到达目的
+
+第二点：
+
+同样是修改pv.yaml的path属性值同样采用绝对路径
+
 <details open>
 <summary>Install</summary>
 Pip install the ultralytics package including
@@ -136,5 +146,4 @@ See [Classification Docs](https://docs.ultralytics.com/tasks/classification/) fo
 - **Speed** averaged over ImageNet val images using an [Amazon EC2 P4d](https://aws.amazon.com/ec2/instance-types/p4/)
   instance.
   <br>Reproduce by `yolo val classify data=path/to/ImageNet batch=1 device=0/cpu`
-
 
